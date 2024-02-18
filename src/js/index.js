@@ -1,3 +1,13 @@
-import { sayHello } from './demo';
+import { buttonElement, optionsElement, rangeElement } from './dom';
+import {
+	changeLengthText,
+	generatePassword,
+	getCheckedOptions,
+	updatePasswordLength
+} from './password-functions';
 
-sayHello();
+changeLengthText();
+
+rangeElement.addEventListener('input', updatePasswordLength);
+buttonElement.addEventListener('click', generatePassword);
+optionsElement.addEventListener('change', getCheckedOptions);

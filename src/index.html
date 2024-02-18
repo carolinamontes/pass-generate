@@ -1,17 +1,59 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/assets/images/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/base/normalize.css" />
-		<link rel="stylesheet" href="css/base/base.css" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<title>Vite App</title>
-	</head>
-	<body>
-		<h1>WEB WITH VITE</h1>
-		<!-- <img src="./assets/images/cute-cat.webp" alt="" /> -->
-		<script type="module" src="./js/index.js"></script>
-	</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de password</title>
+    <link rel="stylesheet" href="./css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="centrar container">
+    <input type="text" id="password" class="separar rec-password" readonly>
+    <h4 class="password"></h4>
+
+    <div class="flex flex-centrar separar">
+        <h4></h4>
+        <h4 id="password-length">32</h4>
+    </div>
+
+    <div class="separar flex flex-centrar secondBox">
+        <label for="range" class="separar-num">4</label>
+        <input id="range" type="range" min="4" max="32" value="16" class="linea">
+        <label for="range" class="separar-num">32</label>
+    </div>
+
+    <div class="options separar" id="options">
+        <div class="flex flex-checkbox">
+            <span>Include Uppercase</span>
+            <input type="checkbox" id="uppercase" class="input">
+            <label for="uppercase" class="options-individual label"></label>
+        </div>
+        <div class="flex flex-checkbox">
+            <span>Include Lowercase</span>
+            <input type="checkbox" class="checkbox input" id="lowercase">
+            <label for="lowercase" class="options-individual label"></label>
+        </div>
+        <div class="flex flex-checkbox">
+            <span>Include Numbers</span>
+            <input type="checkbox" id="numbers" class="input">
+            <label for="numbers" class="options-individual label"></label>
+
+        </div>
+        <div class="flex flex-checkbox">
+            <span>Include Symbols</span>
+            <input type="checkbox" id="symbols" class="input">
+            <label for="symbols" class="options-individual label"></label>
+        </div>
+    </div>
+
+    <div>
+        <button id="button-generate-pass" class="separar button" disabled>Generate Password</button>
+    </div>
+
+</section>
+<script type="module" src="./js/index.js"></script>
+</body>
 </html>
